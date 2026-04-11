@@ -245,10 +245,9 @@ Run all cells to:
 ```
 Heart-disease-prediction/
 │── heart_disease_uci.csv
-│── Tisha_Models/
-│   ├── Decision Tree Model
-│   ├── SVM Model
-│   ├── Naive Bayes Model
+│── Tisha_Decision_Tree_Model.ipynb
+│── Tisha_SVM_Model.ipynb
+│── Tisha_Naive_Bayes_Model.ipynb
 │── KNN_model.ipynb
 │── logistic_regression_model.ipynb
 │── random_forest_model.ipynb
