@@ -2,14 +2,14 @@
 
 **Heart Disease Prediction using Machine Learning (TAE-I Project)**
 
----
+
 
 ## 👩‍💻 Team Members
 
 * **Tisha Mondal (CS23059)**
 * **Akshad Jaiswal (CS23057)**
 
----
+
 
 ## 🏫 Institute Details
 
@@ -17,7 +17,7 @@ S. B. Jain Institute of Technology, Management & Research, Nagpur
 Semester: 6th (Third Year)
 Session: 2025–26
 
----
+
 
 ## 📌 Project Description
 
@@ -27,7 +27,7 @@ This project focuses on building a **Machine Learning-based Heart Disease Predic
 
 A total of **6 Machine Learning models** are implemented and compared to determine the best-performing model.
 
----
+
 
 ## 🎯 Objective
 
@@ -36,7 +36,7 @@ A total of **6 Machine Learning models** are implemented and compared to determi
 * To identify the most accurate model for prediction
 * To understand the role of preprocessing in ML
 
----
+
 
 ## 📊 Dataset Information
 
@@ -50,7 +50,7 @@ A total of **6 Machine Learning models** are implemented and compared to determi
 * `0 → No Heart Disease`
 * `1 → Heart Disease Present`
 
----
+
 
 ## ⚙️ Models Implemented
 
@@ -66,7 +66,7 @@ A total of **6 Machine Learning models** are implemented and compared to determi
 * K-Nearest Neighbors (KNN)
 * Random Forest
 
----
+
 
 ## 🧠 Final Combined Analysis
 
@@ -76,7 +76,7 @@ A separate notebook (**Heart_Disease_Complete_Model_Analysis.ipynb**) was create
 * Compare performance
 * Generate graphs & evaluation metrics
 
----
+
 
 ## ⚙️ Implementation Details
 
@@ -88,7 +88,7 @@ A separate notebook (**Heart_Disease_Complete_Model_Analysis.ipynb**) was create
 * Seaborn
 * Scikit-learn
 
----
+
 
 ### 🔹 Steps Performed
 
@@ -104,7 +104,7 @@ A separate notebook (**Heart_Disease_Complete_Model_Analysis.ipynb**) was create
 * Applied **One-Hot Encoding**
 * Feature scaling using **StandardScaler**
 
----
+
 
 #### 3. Exploratory Data Analysis (EDA)
 
@@ -112,7 +112,7 @@ A separate notebook (**Heart_Disease_Complete_Model_Analysis.ipynb**) was create
 * Correlation heatmap
 * Data summary (`info`, `describe`)
 
----
+
 
 #### 4. Model Training
 
@@ -125,7 +125,7 @@ Models used:
 * KNN
 * Random Forest
 
----
+
 
 #### 5. Model Evaluation
 
@@ -139,14 +139,14 @@ Metrics used:
 * ROC Curve
 * Precision-Recall Curve
 
----
+
 
 #### 6. Train-Test Splits Used
 
 * **80:20**
 * **70:30**
 
----
+
 
 #### 7. Visualization
 
@@ -156,7 +156,7 @@ Metrics used:
 * Accuracy comparison graph
 * Heatmap for model performance
 
----
+
 
 ## 📈 Results Summary
 
@@ -172,7 +172,7 @@ Metrics used:
 
 * Models perform better with **more training data (80:20 split)**
 
----
+
 
 ## ▶️ How to Run the Project (Step-by-Step)
 
@@ -183,7 +183,7 @@ git clone https://github.com/akshadjaiswal005/Heart-disease-prediction.git
 cd Heart-disease-prediction
 ```
 
----
+
 
 ### 🔹 Step 2: Install Required Libraries
 
@@ -191,7 +191,7 @@ cd Heart-disease-prediction
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
----
+
 
 ### 🔹 Step 3: Open Notebooks
 
@@ -204,7 +204,7 @@ Use either:
 jupyter notebook
 ```
 
----
+
 
 ### 🔹 Step 4: Run Individual Models
 
@@ -222,7 +222,7 @@ jupyter notebook
 
 Run all cells step-by-step
 
----
+
 
 ### 🔹 Step 5: Run Final Analysis
 
@@ -238,7 +238,7 @@ Run all cells to:
 * Generate graphs
 * View results
 
----
+
 
 ## 📂 Project Structure
 
@@ -256,7 +256,7 @@ Heart-disease-prediction/
 │── README.md
 ```
 
----
+
 
 ## 📌 Conclusion
 
@@ -266,7 +266,7 @@ This project demonstrates that Machine Learning can effectively predict heart di
 * Data preprocessing significantly improved accuracy
 * Increasing training data improved model performance
 
----
+
 
 ## 🔮 Future Scope
 
@@ -275,13 +275,7 @@ This project demonstrates that Machine Learning can effectively predict heart di
 * Deploy as web app (Flask/Streamlit)
 * Add real-time prediction system
 
----
 
-## 📚 Reference
-
-Based on final project report 
-
----
 
 ## 👩‍💻 Developed By
 
