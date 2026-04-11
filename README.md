@@ -1,140 +1,177 @@
+	Project Title
+Heart Disease Prediction using Machine Learning (TAE-I Project)
 
+	Team Members
+•	Tisha Mondal (CS23059)
+•	Akshad Jaiswal (CS23057)
 
-# Heart Disease Prediction
+	Institute Details
+S. B. Jain Institute of Technology, Management & Research, Nagpur
+Semester: 6th (Third Year)
+Session: 2025–26
 
-## Project Overview
-Predict heart disease presence (0/1) using multiple machine learning algorithms on UCI Heart Disease dataset.
+	Project Description
+Heart disease is one of the leading causes of death worldwide. Early prediction of heart disease can help in timely diagnosis and treatment, reducing the risk of severe health complications.
+This project focuses on building a Machine Learning-based Heart Disease Prediction System using the UCI Heart Disease Dataset. The system analyzes patient medical data such as age, cholesterol, blood pressure, etc., and predicts whether the person is likely to have heart disease.
+A total of 6 Machine Learning models are implemented and compared to determine the best-performing model.
 
-## 🧠Algorithms Implemented
-- Logistic Regression (primary for binary classification)
-- Random Forest
-- K-Nearest Neighbors (KNN)
-- Support Vector Machine (SVM)
-- Naive Bayes
-- Decision Tree
+	Objective
+•	To implement and compare multiple ML models
+•	To analyze model performance using different metrics
+•	To identify the most accurate model for prediction
+•	To understand the role of preprocessing in ML
 
-## 📊Key Results (80:20 Split)
+	Dataset Information
+•	Dataset Name: UCI Heart Disease Dataset
+•	Source: Kaggle / UCI Repository
+•	Records: ~300
+•	Features: 13 input features + 1 target
+Target Variable:
+•	0 → No Heart Disease
+•	1 → Heart Disease Present
 
-| Model | Accuracy | Precision | Recall | F1 Score |
-|-------|----------|-----------|--------|----------|
-| **Logistic Regression** | **0.900** | **0.880** | **0.88** | **0.880** |
-| SVM | 0.850 | 0.833 | 0.80 | 0.816 |
-| Decision Tree | 0.817 | 0.769 | 0.80 | 0.784 |
-| Naive Bayes | 0.600 | 1.000 | 0.84 | 0.077 |
+	Models Implemented
 
-## 🔧 Implementation Steps
+	Tisha Mondal:
+•	Decision Tree
+•	Support Vector Machine (SVM)
+•	Naive Bayes
 
-### 1. Setup
-```bash
-pip install pandas scikit-learn numpy
-```
+	Akshad Jaiswal:
+•	Logistic Regression
+•	K-Nearest Neighbors (KNN)
+•	Random Forest
 
-### 2. Load & Preprocess Data
-```python
-import pandas as pd
-from sklearn.preprocessing import OneHotEncoder
+	Final Combined Analysis
+A separate notebook (Heart_Disease_Complete_Model_Analysis.ipynb) was created to:
+•	Combine all models
+•	Compare performance
+•	Generate graphs & evaluation metrics
 
-df = pd.read_csv('heart_disease_uci.csv')
+	Implementation Details
 
-# One-Hot Encoding for categorical variables
-categorical_cols = ['sex', 'cp', 'restecg', 'slope', 'thal']
-df_encoded = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
-```
+	Libraries Used
+•	Pandas
+•	NumPy
+•	Matplotlib
+•	Seaborn
+•	Scikit-learn
 
-### 3. Train Logistic Regression (Binary: 0/1)
-```python
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+	Steps Performed
+1. Data Loading
+•	Dataset loaded from GitHub using URL
+2. Data Preprocessing
+•	Dropped unnecessary column (id)
+•	Converted target variable into binary
+•	Handled missing values using SimpleImputer
+•	Applied One-Hot Encoding
+•	Feature scaling using StandardScaler
 
-X = df_encoded.drop('target', axis=1)
-y = df_encoded['target']
+3. Exploratory Data Analysis (EDA)
+•	Count plot for target variable
+•	Correlation heatmap
+•	Data summary (info, describe)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+4. Model Training
+Models used:
+•	Decision Tree
+•	SVM
+•	Naive Bayes
+•	Logistic Regression
+•	KNN
+•	Random Forest
 
-model = LogisticRegression()
-model.fit(X_train, y_train)
-predictions = model.predict(X_test)  # Outputs: 0 or 1
+5. Model Evaluation
+Metrics used:
+•	Accuracy
+•	Precision
+•	Recall
+•	F1 Score
+•	Confusion Matrix
+•	ROC Curve
+•	Precision-Recall Curve
 
-print(f"Accuracy: {accuracy_score(y_test, predictions):.3f}")
-```
+6. Train-Test Splits Used
+•	80:20
+•	70:30
 
-### 4. Train Other Models (Same Pattern)
-```python
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
+7. Visualization
+•	Confusion matrices for all models
+•	Bar graphs for performance comparison
+•	ROC curve comparison
+•	Accuracy comparison graph
+•	Heatmap for model performance
 
-models = {
-    'Random Forest': RandomForestClassifier(),
-    'KNN': KNeighborsClassifier(),
-    'SVM': SVC()
-}
+	Results Summary
+•	Best Performing Models:
+o	Logistic Regression (~90%)
+o	Random Forest (~88%)
+o	SVM (~85%)
+•	Lowest Performance:
+o	Naive Bayes
+•	Models perform better with more training data (80:20 split)
 
-for name, model in models.items():
-    model.fit(X_train, y_train)
-    print(f"{name}: {accuracy_score(y_test, model.predict(X_test)):.3f}")
-```
+	How to Run the Project (Step-by-Step)
 
-## 📁 Project Structure
-```
-Heart_disease_prediction/
-└── Heart/Tisha_Models/
-    ├── logistic_regression_model.ipynb
-    ├── random_forest_model.ipynb
-    ├── KNN_model.ipynb
-    ├── Heart_Disease_Complete_Model_Analysis.ipynb
-    └── heart_disease_uci.csv
-```
-Methodology
-Data loading using GitHub-hosted dataset
-Data preprocessing (handling missing values, encoding, scaling)
-Model training and testing
-Performance evaluation using:
-Accuracy Score
-Confusion Matrix
-Classification Report
-Each model is evaluated using two different train-test splits:
+Step 1: Clone Repository
+git clone https://github.com/akshadjaiswal005/Heart-disease-prediction.git
+cd Heart-disease-prediction
 
-80:20 (Training:Testing)
-70:30 (Training:Testing)
-This allows comparison of model performance under varying data conditions.
+Step 2: Install Required Libraries
+pip install pandas numpy matplotlib seaborn scikit-learn
 
-Repository Structure
-Individual model implementations are organized into separate notebooks
-Final combined notebook includes all models and comparative evaluation
-Dataset is stored in the repository and accessed via raw GitHub link
-Tools and Technologies
-Python
-Pandas, NumPy
-Scikit-learn
-Matplotlib, Seaborn
-Google Colab
-GitHub (for collaboration and version control)
-Collaboration
-This project is developed collaboratively as part of Machine Learning TAE-1.
+Step 3: Open Notebooks
+Use either:
+	Google Colab
+	Jupyter Notebook
+jupyter notebook
 
-Tisha Mondal – Decision Tree, SVM, Naive Bayes
-Akshad Jaiswal – Logistic Regression, KNN, Random Forest
+Step 4: Run Individual Models
+•	Open files inside Tisha_Models folder:
+o	Decision Tree
+o	SVM
+o	Naive Bayes
+•	Open other notebooks:
+o	Logistic Regression
+o	KNN
+o	Random Forest
+Run all cells step-by-step
 
-## 💡 Quick Start for New Users
+Step 5: Run Final Analysis
+Open:
+Heart_Disease_Complete_Model_Analysis.ipynb
+Run all cells to:
+•	Compare models
+•	Generate graphs
+•	View results
 
-1. **Clone & navigate**
-```bash
-git clone <your-repo-url>
-cd Heart_disease_prediction/Heart/Tisha_Models
-```
+	Project Structure
+Heart-disease-prediction/
+│── heart_disease_uci.csv
+│── Tisha_Models/
+│   ├── Decision Tree Model
+│   ├── SVM Model
+│   ├── Naive Bayes Model
+│── KNN_model.ipynb
+│── logistic_regression_model.ipynb
+│── random_forest_model.ipynb
+│── Heart_Disease_Complete_Model_Analysis.ipynb
+│── README.md
 
-2. **Run any notebook** (Jupyter/Colab)
-   - Start with `logistic_regression_model.ipynb`
-   - Then explore other model notebooks
+	Conclusion
+This project demonstrates that Machine Learning can effectively predict heart disease using clinical data.
+•	Logistic Regression and Random Forest performed best
+•	Data preprocessing significantly improved accuracy
+•	Increasing training data improved model performance
 
-3. **Key observation**: Logistic Regression works best for this binary classification problem
+	Future Scope
+•	Use larger datasets
+•	Apply Deep Learning models
+•	Deploy as web app (Flask/Streamlit)
+•	Add real-time prediction system
 
-## 📝 Notes
-- All categorical features require One-Hot Encoding before training
-- Target variable is binary (0 = No disease, 1 = Disease)
-- Models are evaluated on Accuracy, Precision, Recall, and F1 Score
+	Developed By
+•	Tisha Mondal
+•	Akshad Jaiswal
 
----
 
