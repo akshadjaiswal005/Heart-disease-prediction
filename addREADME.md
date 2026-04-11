@@ -86,6 +86,36 @@ Heart_disease_prediction/
     ├── Heart_Disease_Complete_Model_Analysis.ipynb
     └── heart_disease_uci.csv
 ```
+Methodology
+Data loading using GitHub-hosted dataset
+Data preprocessing (handling missing values, encoding, scaling)
+Model training and testing
+Performance evaluation using:
+Accuracy Score
+Confusion Matrix
+Classification Report
+Each model is evaluated using two different train-test splits:
+
+80:20 (Training:Testing)
+70:30 (Training:Testing)
+This allows comparison of model performance under varying data conditions.
+
+Repository Structure
+Individual model implementations are organized into separate notebooks
+Final combined notebook includes all models and comparative evaluation
+Dataset is stored in the repository and accessed via raw GitHub link
+Tools and Technologies
+Python
+Pandas, NumPy
+Scikit-learn
+Matplotlib, Seaborn
+Google Colab
+GitHub (for collaboration and version control)
+Collaboration
+This project is developed collaboratively as part of Machine Learning TAE-1.
+
+Tisha Mondal – Decision Tree, SVM, Naive Bayes
+Akshad Jaiswal – Logistic Regression, KNN, Random Forest
 
 ## 💡 Quick Start for New Users
 
