@@ -1,7 +1,5 @@
 # Tisha Models - Machine Learning TAE-1
 
-This folder contains machine learning models implemented by Tisha Mondal as part of the Heart Disease Prediction project using the UCI Heart Disease dataset.
-
 ## Models Included
 
 1. Decision Tree Model  
@@ -36,7 +34,4 @@ This folder contains machine learning models implemented by Tisha Mondal as part
 - Performance evaluation using standard metrics  
 - Visualization for better understanding  
 
-## Contribution
 
-This folder represents the contribution of Tisha Mondal to the collaborative Machine Learning TAE-1 project.  
-Each model is implemented and tested independently and will later be combined into a final integrated notebook.
